@@ -1,0 +1,145 @@
+@font-face{
+    font-family: 'Amoria';
+    src: url('../fonts/amoria/AMORIA.otf') format('woff2'),
+         url('../fonts/amoria/AMORIA.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'Satoshi';
+    src: url('../fonts/satoshi/Satoshi-Regular.otf') format('woff2'),
+         url('./fonts/satoshi/Satoshi-Regular.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root{
+    --cor-primaria: #A94FFF;
+    --cor-secundaria: #001028;
+    --card-background-primario: #C5E2FF;
+    --card-background-secundario: #E7D7FF;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Satoshi', sans-serif;
+}
+
+body{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    background-color: var(--cor-secundaria);
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.bg-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/bg.png'); 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    filter: blur(5px); 
+    transform: scale(1.1); 
+    z-index: -1; 
+}
+
+nav{
+    position: absolute;
+    top: 30px;
+    display: flex;
+    align-items: center;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    gap: 50px;
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+    width: 90%;
+    height: fit-content;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+nav > div{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+
+}
+
+nav > div > p{
+    font-family: 'Amoria', sans-serif;
+    font-size: 2rem;
+}
+
+nav > div > span{
+    width: 50px;
+}
+
+nav > div > span > img{
+    max-width: 100%;
+}
+
+nav > ul{
+    list-style: none;
+    display: flex;
+}
+
+nav li{
+    color: var(--cor-secundaria);
+    text-transform: uppercase;
+    font-size: .8rem;
+    font-weight: bold;
+    margin: 10px;
+    cursor: pointer;
+}
+
+main{
+    margin-top: 50vh;
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+    padding: 30px;
+    width: 90%;
+    border-radius: 10px;
+}
+
+section{
+    height: 100vh;
+}
+
+footer{
+    padding: 30px;
+    margin-top: 20vh;
+    width: 100%;
+    background-color: var(--cor-secundaria);
+    color: white;
+}
+
+footer > div{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+footer > div > p{
+    font-family: 'Amoria', sans-serif;
+    font-size: 2rem;
+}
+
+footer > div > span{
+    width: 100px;
+}
+
+footer > div > span > img{
+    max-width: 100%;
+}
