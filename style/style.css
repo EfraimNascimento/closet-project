@@ -17,6 +17,7 @@
 :root{
     --cor-primaria: #A94FFF;
     --cor-secundaria: #001028;
+    --sombra: #0010288c;
     --card-background-primario: #C5E2FF;
     --card-background-secundario: #E7D7FF;
 }
@@ -55,19 +56,21 @@ body{
 }
 
 nav{
-    position: absolute;
-    top: 30px;
+    position: fixed;
+    left: 0;
+    top: 0;
     display: flex;
     align-items: center;
     flex-flow: row nowrap;
     justify-content: space-between;
     gap: 50px;
     background-color: var(--cor-primaria);
+    box-shadow: 0px 0px 4px 2px var(--sombra);
     color: var(--cor-secundaria);
-    width: 90%;
+    width: 100%;
     height: fit-content;
     padding: 15px;
-    border-radius: 10px;
+    z-index: 1000;
 }
 
 nav > div{
@@ -105,7 +108,7 @@ nav li{
 }
 
 main{
-    margin-top: 50vh;
+    margin-top: 30vh;
     background-color: var(--cor-primaria);
     color: var(--cor-secundaria);
     padding: 30px;
@@ -114,7 +117,63 @@ main{
 }
 
 section{
-    height: 100vh;
+    min-height: 50vh;
+}
+
+section#About-us{
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    gap: 15px;
+    border: 1px solid var(--cor-secundaria);
+    border-radius: 10px;
+    padding: 20px;
+    color: var(--cor-primaria);
+    background-color: var(--cor-secundaria);
+    box-shadow: 0px 0px 4px 2px var(--sombra);
+    overflow: hidden;
+}
+
+section#About-us .section-bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(../images/bg-logo-deco.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: opacity(.5);
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+}
+
+section#About-us h1{
+    text-transform: uppercase;
+    font-family: 'Amoria', sans-serif;
+    z-index: 10;
+}
+
+section#About-us p {
+    z-index: 10;
+    text-align: justify;
+    line-height: 1.5rem;
+    letter-spacing: 1.2px;
+    color: var(--card-background-secundario);
+    text-indent: 15px;
+}
+
+section#About-us strong {
+    font-family: 'Amoria', sans-serif;
+    font-size: 1.4rem;
+    font-weight: bold;
+    z-index: 10;
+}
+
+section#About-us i {
+    font-weight: bold;
+    z-index: 10;
 }
 
 footer{
