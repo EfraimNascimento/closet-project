@@ -197,38 +197,6 @@ section#About-us i {
     z-index: 10;
 }
 
-section#newsletter{
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    gap: 15px;
-    border: 1px solid var(--cor-secundaria);
-    border-radius: 5px;
-    padding: 20px;
-    width: 95%;
-    color: var(--cor-primaria);
-    background-color: var(--cor-secundaria);
-    box-shadow: 0px 0px 4px 2px var(--sombra);
-}
-
-section#newsletter i{
-    color: var(--card-background-primario);
-    font-size: 2.5rem;
-}
-
-section#newsletter > h2{
-    text-transform: uppercase;
-}
-
-section#newsletter > h2 > span{
-    color: var(--card-background-primario);
-    font-family: 'Amoria';
-}
-
-section#newsletter > p{
-    color: var(--card-background-secundario);
-}
-
 footer{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -246,24 +214,22 @@ footer > div#footer-logo{
     flex-flow: column nowrap;
     align-items: center;
     justify-content: center;
-    grid-column-start: 2;
-}
-
-footer > div > h2{
-    font-family: 'Amoria', sans-serif;
-    font-size: 2rem;
+    grid-row: 1/span 2;
+    grid-column: 2;
 }
 
 footer > div > span{
-    width: 100px;
+    width: 200px;
 }
 
 footer > div > span > img{
     max-width: 100%;
+    transform: rotate(45deg);
 }
 
 footer > div.footer-infos{
-    grid-row-start: 2;
+    display: flex;
+    flex-flow: column nowrap;
 }
 
 footer > div.footer-infos h3{
@@ -282,6 +248,66 @@ footer > div.footer-infos li > a{
     color: var(--card-background-secundario);
 }
 
+footer > div.footer-infos.newsletter{
+    align-items: end;
+    justify-content: center;
+    text-align: center;
+    grid-row-start: 1;
+    grid-column-start: 3;
+    gap: 10px;
+}
+
+footer > div.footer-infos.newsletter i{
+    color: var(--card-background-primario);
+    font-size: 2rem;
+}
+
+footer > div.footer-infos.newsletter > h3 > span{
+    color: var(--card-background-primario);
+    font-family: 'Amoria';
+}
+
+footer > div.footer-infos.newsletter > p{
+    color: var(--card-background-secundario);
+    text-align: end;
+}
+
+
+footer > div.footer-infos.newsletter i{
+    color: var(--card-background-primario);
+}
+
+footer > div.footer-infos.newsletter > div input{
+    padding: 10px 5px;
+    width: 200px;
+    border: 1px solid var(--cor-primaria);
+    outline: none;
+    /* border-radius: 5px; */
+}
+
+footer > div.footer-infos.newsletter > div button{
+    padding: 10px;
+    border: 1px solid var(--cor-primaria);
+    background-color: var(--cor-secundaria);
+    color: var(--card-background-primario);
+    /* border-radius: 5px; */
+    transition: color, background-color .5s;
+}
+
+footer > div.footer-infos.newsletter > div button:hover{
+    cursor: pointer;
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+
+}
+
+footer > div.footer-infos.social-medias{
+    align-items: start;
+    justify-content: center;
+    grid-row-start: 2;
+    grid-column-start: 1;
+}
+
 footer > div.footer-infos.social-medias ul{
     display: flex;
     justify-content: center;
@@ -293,13 +319,28 @@ footer > div.footer-infos.social-medias i{
     font-size: 1.3rem;
 }
 
+footer > div.footer-infos.infos{
+    align-items: end;
+    justify-content: center;
+    grid-row-start: 2;
+    grid-column-start: 3;
+}
+
 footer > div.footer-infos.infos ul{
     margin-top: 10%;
+    text-align: end;
     gap: 20px;
 }
 
 footer > div.footer-infos.infos li{
     margin-top: 7px;
+}
+
+footer > div.footer-infos.contato{
+    align-items: start;
+    justify-content: center;
+    grid-column-start: 1;
+    grid-row-start: 1;
 }
 
 footer > div.footer-infos.contato p{
