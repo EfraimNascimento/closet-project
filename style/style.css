@@ -77,12 +77,12 @@ nav > span{
     align-self: center;
 }
 
-nav > span i{
+nav i{
     font-size: 1.2rem;
     transition: color .5s;
 }
 
-nav > span i:hover{
+nav i:hover{
     cursor: pointer;
     color: var(--card-background-secundario);
 }
@@ -126,15 +126,6 @@ nav li{
 nav li > a{
     text-decoration: none;
     color: var(--cor-secundaria);
-    border: 1px solid transparent;
-    border-radius: 10px;
-    transition: color, border, .5s;
-    padding: 5px;
-}
-
-nav li > a:hover{
-    border: 1px solid var(--card-background-secundario);
-    color: var(--card-background-secundario);
 }
 
 main{
@@ -211,6 +202,10 @@ section#About-us i {
 }
 
 footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
     padding: 30px;
     margin-top: 20vh;
     width: 100%;
@@ -218,13 +213,15 @@ footer{
     color: white;
 }
 
-footer > div{
+footer > div#footer-logo{
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
+
+    grid-column-start: 2;
 }
 
-footer > div > p{
+footer > div > h2{
     font-family: 'Amoria', sans-serif;
     font-size: 2rem;
 }
@@ -235,4 +232,62 @@ footer > div > span{
 
 footer > div > span > img{
     max-width: 100%;
+}
+
+footer > div.footer-infos{
+    grid-row-start: 2;
+}
+
+footer > div.footer-infos h3{
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+footer > div.footer-infos > ul{
+    color: var(--card-background-secundario);
+    list-style: none;
+}
+
+footer > div.footer-infos li > a{
+    text-decoration: none;
+    color: var(--card-background-secundario);
+}
+
+footer > div.footer-infos.social-medias ul{
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+    gap: 20px;
+}
+
+footer > div.footer-infos.social-medias i{
+    font-size: 1.3rem;
+}
+
+footer > div.footer-infos.infos ul{
+    margin-top: 10%;
+    gap: 20px;
+}
+
+footer > div.footer-infos.infos li{
+    margin-top: 7px;
+}
+
+footer > div.footer-infos.contato p{
+    font-style: italic;
+    margin-top: 10%;
+}
+
+footer > div.footer-infos.contato ul{
+    margin-top: 10%;
+}
+
+footer > div.footer-infos.contato li{
+    margin-top: 7px;
+}
+
+footer > div.footer-infos.contato i{
+    font-size: 1.3rem;
+    margin-right: 7px;
 }
