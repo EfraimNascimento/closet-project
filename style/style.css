@@ -137,11 +137,7 @@ main{
     flex-flow: column nowrap;
     align-items: center;
     padding: 50px 0px;
-}
-
-section{
-    min-height: 50vh;
-    width: 100%;
+    gap: 20px;
 }
 
 section#About-us{
@@ -199,6 +195,36 @@ section#About-us strong {
 section#About-us i {
     font-weight: bold;
     z-index: 10;
+}
+
+section#newsletter{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    gap: 15px;
+    border: 1px solid var(--cor-secundaria);
+    border-radius: 5px;
+    padding: 20px;
+    width: 95%;
+    color: var(--cor-primaria);
+    background-color: var(--cor-secundaria);
+    box-shadow: 0px 0px 4px 2px var(--sombra);
+}
+
+section#newsletter i{
+    font-size: 2.5rem;
+}
+
+section#newsletter > h2{
+    text-transform: uppercase;
+}
+
+section#newsletter > h2 > span{
+    font-family: 'Amoria';
+}
+
+section#newsletter > p{
+    color: var(--card-background-secundario);
 }
 
 footer{
