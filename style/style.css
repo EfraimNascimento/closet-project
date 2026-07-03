@@ -61,10 +61,8 @@ nav{
     position: fixed;
     left: 0;
     top: 0;
-    display: flex;
-    align-items: center;
-    flex-flow: row nowrap;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 50px;
     background-color: var(--cor-primaria);
     box-shadow: 0px 0px 4px 2px var(--sombra);
@@ -75,11 +73,25 @@ nav{
     z-index: 1000;
 }
 
+nav > span{
+    align-self: center;
+}
+
+nav > span i{
+    font-size: 1.2rem;
+    transition: color .5s;
+}
+
+nav > span i:hover{
+    cursor: pointer;
+    color: var(--card-background-secundario);
+}
+
 nav > div{
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
-
+    justify-content: center;
 }
 
 nav > div > p{
@@ -96,6 +108,8 @@ nav > div > span > img{
 }
 
 nav > ul{
+    margin-left: auto;
+    align-items: center;
     list-style: none;
     display: flex;
     gap: 10px;
@@ -127,13 +141,16 @@ main{
     margin-top: 30vh;
     background-color: var(--cor-primaria);
     color: var(--cor-secundaria);
-    padding: 30px;
-    max-width: 50%;
-    border-radius: 10px;
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    padding: 50px 0px;
 }
 
 section{
     min-height: 50vh;
+    width: 100%;
 }
 
 section#About-us{
@@ -141,10 +158,11 @@ section#About-us{
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
-    gap: 15px;
+    gap: 20px;
     border: 1px solid var(--cor-secundaria);
-    border-radius: 10px;
+    border-radius: 5px;
     padding: 20px;
+    width: 95%;
     color: var(--cor-primaria);
     background-color: var(--cor-secundaria);
     box-shadow: 0px 0px 4px 2px var(--sombra);
