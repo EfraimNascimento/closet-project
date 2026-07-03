@@ -245,7 +245,7 @@ footer > div#footer-logo{
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
-
+    justify-content: center;
     grid-column-start: 2;
 }
 
