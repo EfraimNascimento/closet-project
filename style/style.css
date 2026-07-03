@@ -212,6 +212,7 @@ section#newsletter{
 }
 
 section#newsletter i{
+    color: var(--card-background-primario);
     font-size: 2.5rem;
 }
 
@@ -220,6 +221,7 @@ section#newsletter > h2{
 }
 
 section#newsletter > h2 > span{
+    color: var(--card-background-primario);
     font-family: 'Amoria';
 }
 
