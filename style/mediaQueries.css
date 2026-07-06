@@ -1,0 +1,109 @@
+@media (max-width: 576px){
+    html{
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .bg-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 90%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        filter: blur(5px);  
+        z-index: -1; 
+    }
+
+    nav > div{
+        display: none;
+    }
+
+    main{
+        width: 100%;
+    }
+
+    section{
+        width: 100%;
+        border-radius: 0px;
+    }
+
+    footer{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr repeat(3);
+        padding: 20px;
+    }
+
+    footer > div#footer-logo{
+        grid-column: 1;
+        grid-row: 3;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    footer > div > span{
+        width: 100px;
+    }
+
+    footer > div.footer-infos.newsletter{
+        align-items: center;
+        justify-content: center;
+        grid-row-start: 1;
+        grid-column: 1/ span 2;
+        gap: 10px;
+    }
+
+    footer > div.footer-infos.newsletter > p{
+        text-align: center;
+    }
+
+    footer > div.footer-infos.social-medias{
+        align-items: flex-end;
+        justify-content: flex-start;
+        grid-row-start: 3;
+        grid-column-start: 2;
+        margin-top: 15%;
+    }
+
+    footer > div.footer-infos.social-medias i{
+        font-size: .9rem;
+    }
+
+    footer > div.footer-infos.infos{
+        grid-row: 2;
+        grid-column: 2;
+        justify-content: flex-start;
+        align-items: flex-end;
+    }
+
+    footer > div.footer-infos.infos ul{
+        margin-top: 10px;
+        text-align: end;
+    }
+
+    footer > div.footer-infos.infos li > a{
+        font-size: .9rem;
+    }
+
+    footer > div.footer-infos.contato{
+        align-items: start;
+        justify-content: flex-start;
+        grid-column-start: 1;
+        grid-row-start: 2;
+    }
+
+    footer > div.footer-infos.contato p{
+        font-size: .9rem;
+    }
+
+    footer > div.footer-infos.contato li{
+        font-size: .8rem;
+    }
+
+    footer > div.footer-infos.contato i{
+        font-size: 1rem;
+        margin-right: 3px;
+    }
+}
